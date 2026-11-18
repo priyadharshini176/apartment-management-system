@@ -2,7 +2,7 @@
 
 A Java + SQL + Python project that manages apartment and resident records, tracks monthly maintenance payments, handles resident complaints, and analyses facility problems with charts.
 
-**Student:** _<your name>_ | **Register No:** _<your number>_ | **Dept:** B.Tech IT, Velalar College of Engineering and Technology
+**Student:** _<PRIYADHARSHINI>_ | **Register No:** _<732925ITR078>_ | **Dept:** B.Tech IT, Velalar College of Engineering and Technology
 **Courses covered:** Java Programming (25ITT32), Software Engineering (25ITT33), Foundations of Data Science (25ITC31)
 
 ## Problem statement
@@ -101,7 +101,7 @@ python python/analysis.py
 Charts are saved in `outputs/charts/`, cleaned data in `outputs/*.csv`. (Run step 1 or 2 first so that `apartment.db` exists.)
 
 ## Live demo (GitHub Pages)
-**Live link:** `https://<your-github-username>.github.io/apartment-management-system/`
+**Live link:** `https://<your-github-priyadharshini176>.github.io/apartment-management-system/`
 
 GitHub Pages can only host static files, so the live link runs the same web interface in **demo mode**: it uses the sample data and the same validation rules inside the browser (`web/demo.js`), and keeps changes in that browser only. The real Java backend and the database run locally (see "How to run").
 
