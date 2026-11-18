@@ -1,0 +1,11 @@
+flowchart TB
+  U[User: Admin / Resident] --> M[Java Console Menu - Main.java]
+  U --> W[Browser UI - web/ HTML, CSS, JS] --> WS[WebServer.java - JSON API]
+  WS --> S
+  M --> S[Business Logic - ManagementService.java]
+  S --> V[Validation - ValidationException]
+  S --> D[DatabaseConnection - JDBC]
+  D --> DB[(SQLite database apartment.db)]
+  DB --> P[Python - pandas: retrieve and preprocess]
+  P --> C[Matplotlib / Seaborn charts]
+  C --> O[outputs/charts/*.png and cleaned CSV files]

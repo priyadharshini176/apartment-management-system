@@ -1,0 +1,26 @@
+PASS  TC01 Add valid apartment
+PASS  TC02 Duplicate apartment number rejected  -> "Apartment C-101 already exists."
+PASS  TC03 Invalid apartment type rejected  -> "Type must be one of [1BHK, 2BHK, 3BHK]"
+PASS  TC04 Add valid resident
+PASS  TC05 Contact with letters rejected  -> "Contact must be exactly 10 digits."
+PASS  TC06 Resident for missing apartment rejected  -> "Apartment ID 999 does not exist."
+PASS  TC07 Resident makes vacant apartment Occupied
+PASS  TC08 Add monthly charge (status Pending)
+PASS  TC09 Duplicate month charge rejected  -> "A charge for this apartment and month already exists."
+PASS  TC10 Invalid month format rejected  -> "Month must be in YYYY-MM format, e.g. 2026-12."
+PASS  TC11 Zero amount rejected  -> "Amount must be greater than zero."
+PASS  TC12 Mark payment Paid sets paid date
+PASS  TC13 Paying an already-paid payment rejected  -> "Payment is already marked Paid."
+PASS  TC14 Pending total for A-102 is 4000 after sample data
+PASS  TC15 Register complaint starts as Open
+PASS  TC16 Invalid category rejected  -> "Category must be one of [Water, Electrical, Cleanliness, Other]"
+PASS  TC17 Empty description rejected  -> "Description is required."
+PASS  TC18 Bad date format rejected  -> "Date must be in YYYY-MM-DD format."
+PASS  TC19 Open -> In Progress
+PASS  TC20 In Progress -> Resolved sets resolved date
+PASS  TC21 Resolved complaint cannot be reopened  -> "A resolved complaint cannot be reopened."
+PASS  TC22 Unknown complaint ID rejected  -> "Complaint ID 999 does not exist."
+PASS  TC23 Category report: Water count is 5 + 1 new = 6
+PASS  TC24 Average resolution days for Electrical (sample data) is positive
+
+Result: 24 passed, 0 failed

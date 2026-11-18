@@ -1,0 +1,23 @@
+flowchart LR
+  R([Resident])
+  A([Association Admin])
+  subgraph S[Apartment Maintenance and Complaint System]
+    UC1(Register complaint)
+    UC2(View own complaint status)
+    UC3(Manage apartments)
+    UC4(Manage residents)
+    UC5(Record monthly charges)
+    UC6(Record payment)
+    UC7(Update complaint status)
+    UC8(Generate reports)
+    UC9(View charts and analysis)
+  end
+  R --> UC1
+  R --> UC2
+  A --> UC3
+  A --> UC4
+  A --> UC5
+  A --> UC6
+  A --> UC7
+  A --> UC8
+  A --> UC9

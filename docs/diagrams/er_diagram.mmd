@@ -1,0 +1,34 @@
+erDiagram
+  APARTMENT ||--o{ RESIDENT : houses
+  APARTMENT ||--o{ MAINTENANCE_PAYMENT : "is charged"
+  RESIDENT ||--o{ COMPLAINT : registers
+  APARTMENT {
+    int apartment_id PK
+    string block_no
+    string apartment_no UK
+    string apartment_type
+    string occupancy
+  }
+  RESIDENT {
+    int resident_id PK
+    string name
+    string contact
+    int apartment_id FK
+  }
+  MAINTENANCE_PAYMENT {
+    int payment_id PK
+    int apartment_id FK
+    string month
+    real amount
+    string status
+    string paid_date
+  }
+  COMPLAINT {
+    int complaint_id PK
+    int resident_id FK
+    string category
+    string description
+    string complaint_date
+    string status
+    string resolved_date
+  }

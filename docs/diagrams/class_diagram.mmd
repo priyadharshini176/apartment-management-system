@@ -1,0 +1,65 @@
+classDiagram
+  class Apartment {
+    -int apartmentId
+    -String blockNo
+    -String apartmentNo
+    -String apartmentType
+    -String occupancy
+  }
+  class Resident {
+    -int residentId
+    -String name
+    -String contact
+    -int apartmentId
+    -String apartmentNo
+  }
+  class MaintenancePayment {
+    -int paymentId
+    -int apartmentId
+    -String month
+    -double amount
+    -String status
+    -String paidDate
+  }
+  class Complaint {
+    -int complaintId
+    -int residentId
+    -String category
+    -String description
+    -String complaintDate
+    -String status
+    -String resolvedDate
+  }
+  class ManagementService {
+    +addApartment()
+    +addResident()
+    +addMonthlyCharge()
+    +markPaid()
+    +registerComplaint()
+    +updateComplaintStatus()
+    +listApartments()
+    +listResidents()
+    +listPayments()
+    +listComplaints()
+    +pendingAmountByApartment()
+    +complaintsByCategory()
+    +averageResolutionDays()
+  }
+  class DatabaseConnection {
+    +getConnection()
+    +initialiseIfNeeded()
+  }
+  class ValidationException
+  class Main {
+    +main()
+  }
+  Apartment "1" --> "0..*" Resident : houses
+  Apartment "1" --> "0..*" MaintenancePayment : charged
+  Resident "1" --> "0..*" Complaint : registers
+  Main --> ManagementService
+  ManagementService --> DatabaseConnection
+  ManagementService ..> ValidationException : throws
+  ManagementService ..> Apartment
+  ManagementService ..> Resident
+  ManagementService ..> MaintenancePayment
+  ManagementService ..> Complaint

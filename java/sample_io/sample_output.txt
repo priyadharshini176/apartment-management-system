@@ -1,0 +1,135 @@
+Database created: demo.db
+=== Apartment Maintenance & Resident Complaint Management System ===
+
+---------------- MENU ----------------
+ 1. Add apartment            2. Add resident
+ 3. View apartments          4. View residents
+ 5. Add monthly charge       6. Record payment (mark Paid)
+ 7. View payments
+ 8. Register complaint       9. Update complaint status
+10. View complaints         11. Reports
+ 0. Exit
+--------------------------------------
+Enter choice: ID   Block  Apt No   Type   Occupancy
+1    A      A-101    1BHK   Occupied 
+2    A      A-102    2BHK   Occupied 
+3    A      A-201    2BHK   Occupied 
+4    B      B-101    3BHK   Occupied 
+5    B      B-102    1BHK   Vacant   
+6    B      B-201    3BHK   Occupied 
+
+---------------- MENU ----------------
+ 1. Add apartment            2. Add resident
+ 3. View apartments          4. View residents
+ 5. Add monthly charge       6. Record payment (mark Paid)
+ 7. View payments
+ 8. Register complaint       9. Update complaint status
+10. View complaints         11. Reports
+ 0. Exit
+--------------------------------------
+Enter choice: ID   Name                 Contact      Apt No
+1    Arun Kumar           9876500001   A-101   
+2    Meena Devi           9876500002   A-102   
+3    Ravi Shankar         9876500003   A-201   
+4    Lakshmi Priya        9876500004   B-101   
+5    Karthik Raja         9876500005   B-201   
+
+---------------- MENU ----------------
+ 1. Add apartment            2. Add resident
+ 3. View apartments          4. View residents
+ 5. Add monthly charge       6. Record payment (mark Paid)
+ 7. View payments
+ 8. Register complaint       9. Update complaint status
+10. View complaints         11. Reports
+ 0. Exit
+--------------------------------------
+Enter choice: Filter (Paid/Pending, or press Enter for all): ID   Apt No   Month    Amount    Status   Paid Date
+13   B-201    2026-09  2500.00   Pending  -         
+5    A-102    2026-10  2000.00   Pending  -         
+14   B-201    2026-10  2500.00   Pending  -         
+3    A-101    2026-11  1500.00   Pending  -         
+6    A-102    2026-11  2000.00   Pending  -         
+12   B-101    2026-11  2500.00   Pending  -         
+15   B-201    2026-11  2500.00   Pending  -         
+7 record(s).
+
+---------------- MENU ----------------
+ 1. Add apartment            2. Add resident
+ 3. View apartments          4. View residents
+ 5. Add monthly charge       6. Record payment (mark Paid)
+ 7. View payments
+ 8. Register complaint       9. Update complaint status
+10. View complaints         11. Reports
+ 0. Exit
+--------------------------------------
+Enter choice: Resident ID: Category [Water, Electrical, Cleanliness, Other]: Description: Date (YYYY-MM-DD, Enter for today): Complaint registered with ID 13 (status: Open)
+
+---------------- MENU ----------------
+ 1. Add apartment            2. Add resident
+ 3. View apartments          4. View residents
+ 5. Add monthly charge       6. Record payment (mark Paid)
+ 7. View payments
+ 8. Register complaint       9. Update complaint status
+10. View complaints         11. Reports
+ 0. Exit
+--------------------------------------
+Enter choice: Complaint ID: New status [Open, In Progress, Resolved]: Complaint 13 updated to In Progress.
+
+---------------- MENU ----------------
+ 1. Add apartment            2. Add resident
+ 3. View apartments          4. View residents
+ 5. Add monthly charge       6. Record payment (mark Paid)
+ 7. View payments
+ 8. Register complaint       9. Update complaint status
+10. View complaints         11. Reports
+ 0. Exit
+--------------------------------------
+Enter choice: Filter (Open/In Progress/Resolved, or Enter for all): ID   Resident         Category     Date       Status       Description
+9    Karthik Raja     Other        2026-11-01 In Progress  Parking space dispute
+10   Lakshmi Priya    Water        2026-11-05 In Progress  No water supply
+13   Karthik Raja     Water        2026-11-12 In Progress  Tap leaking in kitchen
+3 record(s).
+
+---------------- MENU ----------------
+ 1. Add apartment            2. Add resident
+ 3. View apartments          4. View residents
+ 5. Add monthly charge       6. Record payment (mark Paid)
+ 7. View payments
+ 8. Register complaint       9. Update complaint status
+10. View complaints         11. Reports
+ 0. Exit
+--------------------------------------
+Enter choice: 
+--- Pending maintenance payments (amount per apartment) ---
+A-101    Rs. 1500.00
+A-102    Rs. 4000.00
+B-101    Rs. 2500.00
+B-201    Rs. 7500.00
+TOTAL PENDING: Rs. 15500.00
+
+--- Category-wise complaints ---
+Cleanliness  3
+Electrical   3
+Other        1
+Water        6
+
+--- Complaint status summary ---
+In Progress  3
+Open         2
+Resolved     8
+
+--- Average resolution time (days) ---
+Cleanliness  1.5
+Electrical   1.0
+Water        4.3
+
+---------------- MENU ----------------
+ 1. Add apartment            2. Add resident
+ 3. View apartments          4. View residents
+ 5. Add monthly charge       6. Record payment (mark Paid)
+ 7. View payments
+ 8. Register complaint       9. Update complaint status
+10. View complaints         11. Reports
+ 0. Exit
+--------------------------------------
+Enter choice: Goodbye!

@@ -1,0 +1,13 @@
+complaint_id,resident,apartment_no,block_no,category,description,complaint_date,status,resolved_date,resolution_days,complaint_month
+1,Arun Kumar,A-101,A,Water,No water supply in morning,2026-09-03,Resolved,2026-09-05,2.0,2026-09
+2,Meena Devi,A-102,A,Electrical,Corridor light not working,2026-09-10,Resolved,2026-09-11,1.0,2026-09
+3,Ravi Shankar,A-201,A,Cleanliness,Garbage not collected,2026-09-15,Resolved,2026-09-16,1.0,2026-09
+4,Lakshmi Priya,B-101,B,Water,Low water pressure,2026-09-22,Resolved,2026-09-26,4.0,2026-09
+5,Karthik Raja,B-201,B,Water,Water tank leakage,2026-10-02,Resolved,2026-10-07,5.0,2026-10
+6,Arun Kumar,A-101,A,Electrical,Lift power failure,2026-10-09,Resolved,2026-10-10,1.0,2026-10
+7,Meena Devi,A-102,A,Water,Dirty water in taps,2026-10-18,Resolved,2026-10-24,6.0,2026-10
+8,Ravi Shankar,A-201,A,Cleanliness,Staircase not cleaned,2026-10-25,Resolved,2026-10-27,2.0,2026-10
+9,Karthik Raja,B-201,B,Other,Parking space dispute,2026-11-01,In Progress,,,2026-11
+10,Lakshmi Priya,B-101,B,Water,No water supply,2026-11-05,In Progress,,,2026-11
+11,Arun Kumar,A-101,A,Electrical,Street light broken,2026-11-08,Open,,,2026-11
+12,Karthik Raja,B-201,B,Cleanliness,Drainage overflow,2026-11-10,Open,,,2026-11

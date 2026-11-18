@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apartment Manager</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <span class="logo">AM</span>
+    <div>
+      <h1>Apartment Manager</h1>
+      <p>Maintenance and resident complaints</p>
+    </div>
+  </div>
+  <nav id="tabs">
+    <button data-tab="dashboard" class="active">Dashboard</button>
+    <button data-tab="apartments">Apartments</button>
+    <button data-tab="residents">Residents</button>
+    <button data-tab="payments">Payments</button>
+    <button data-tab="complaints">Complaints</button>
+  </nav>
+</header>
+
+<div id="demo-banner" hidden>
+  Demo mode: no Java server is connected, so this page runs on sample data stored in your browser only.
+  <button id="demo-reset" type="button">Reset demo data</button>
+</div>
+
+<main>
+  <!-- DASHBOARD -->
+  <section id="dashboard" class="tab active">
+    <div class="kpis">
+      <div class="kpi"><span>Total charged</span><b id="k-charged">-</b></div>
+      <div class="kpi good"><span>Collected</span><b id="k-collected">-</b></div>
+      <div class="kpi bad"><span>Pending</span><b id="k-pending">-</b></div>
+      <div class="kpi"><span>Complaints</span><b id="k-complaints">-</b></div>
+      <div class="kpi warn"><span>Unresolved</span><b id="k-unresolved">-</b></div>
+    </div>
+    <div class="grid2">
+      <div class="card"><h2>Complaints by category</h2><div class="chart"><canvas id="c-category"></canvas></div></div>
+      <div class="card"><h2>Complaint status</h2><div class="chart"><canvas id="c-status"></canvas></div></div>
+      <div class="card"><h2>Monthly maintenance</h2><div class="chart"><canvas id="c-monthly"></canvas></div></div>
+      <div class="card"><h2>Pending by apartment</h2><div class="chart"><canvas id="c-pending"></canvas></div></div>
+      <div class="card"><h2>Average days to resolve</h2><div class="chart"><canvas id="c-days"></canvas></div></div>
+    </div>
+  </section>
+
+  <!-- APARTMENTS -->
+  <section id="apartments" class="tab">
+    <div class="card">
+      <h2>Add apartment</h2>
+      <form id="f-apartment" class="form">
+        <label>Block<input name="block" placeholder="A" required></label>
+        <label>Apartment no.<input name="aptNo" placeholder="A-301" required></label>
+        <label>Type
+          <select name="type"><option>1BHK</option><option>2BHK</option><option>3BHK</option></select></label>
+        <label>Occupancy
+          <select name="occupancy"><option>Vacant</option><option>Occupied</option></select></label>
+        <button class="primary">Add</button>
+      </form>
+    </div>
+    <div class="card"><h2>Apartments</h2>
+      <div class="table-wrap"><table id="t-apartments"></table></div></div>
+  </section>
+
+  <!-- RESIDENTS -->
+  <section id="residents" class="tab">
+    <div class="card">
+      <h2>Add resident</h2>
+      <form id="f-resident" class="form">
+        <label>Name<input name="name" required></label>
+        <label>Contact (10 digits)<input name="contact" inputmode="numeric" maxlength="10" required></label>
+        <label>Apartment<select name="apartmentId" class="apt-select"></select></label>
+        <button class="primary">Add</button>
+      </form>
+    </div>
+    <div class="card"><h2>Residents</h2>
+      <div class="table-wrap"><table id="t-residents"></table></div></div>
+  </section>
+
+  <!-- PAYMENTS -->
+  <section id="payments" class="tab">
+    <div class="card">
+      <h2>Add monthly charge</h2>
+      <form id="f-charge" class="form">
+        <label>Apartment<select name="apartmentId" class="apt-select"></select></label>
+        <label>Month<input name="month" type="month" required></label>
+        <label>Amount (Rs.)<input name="amount" type="number" min="1" step="0.01" required></label>
+        <button class="primary">Add charge</button>
+      </form>
+    </div>
+    <div class="card">
+      <div class="row"><h2>Payments</h2>
+        <select id="pay-filter"><option value="">All</option><option>Pending</option><option>Paid</option></select></div>
+      <div class="table-wrap"><table id="t-payments"></table></div>
+    </div>
+  </section>
+
+  <!-- COMPLAINTS -->
+  <section id="complaints" class="tab">
+    <div class="card">
+      <h2>Register complaint</h2>
+      <form id="f-complaint" class="form">
+        <label>Resident<select name="residentId" id="res-select"></select></label>
+        <label>Category
+          <select name="category"><option>Water</option><option>Electrical</option>
+            <option>Cleanliness</option><option>Other</option></select></label>
+        <label class="wide">Description<input name="description" required></label>
+        <label>Date<input name="date" type="date"></label>
+        <button class="primary">Register</button>
+      </form>
+    </div>
+    <div class="card">
+      <div class="row"><h2>Complaints</h2>
+        <select id="cmp-filter"><option value="">All</option><option>Open</option>
+          <option>In Progress</option><option>Resolved</option></select></div>
+      <div class="table-wrap"><table id="t-complaints"></table></div>
+    </div>
+  </section>
+</main>
+
+<div id="toast" role="status"></div>
+<script src="chart.umd.js"></script>
+<script src="demo.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
