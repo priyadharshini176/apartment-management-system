@@ -2,9 +2,9 @@
 
 A Java + SQL + Python project that manages apartment and resident records, tracks monthly maintenance payments, handles resident complaints, and analyses facility problems with charts.
 
-**Student:** _<PRIYADHARSHINI>_ | **Register No:** _<732925ITR078>_ | **Dept:** B.Tech IT, Velalar College of Engineering and Technology
-**Courses covered:** Java Programming (25ITT32), Software Engineering (25ITT33), Foundations of Data Science (25ITC31)
+**Student:** PRIYADHARSHINI | **Register No:** 732925ITR078 | **Dept:** B.Tech IT, Velalar College of Engineering and Technology
 
+**Courses covered:** Java Programming (25ITT32), Software Engineering (25ITT33), Foundations of Data Science (25ITC31)
 ## Problem statement
 Manual handling of resident details, maintenance fees and complaints (water, electrical, cleanliness, other) causes delayed resolution, difficulty tracking payments, and no view of recurring problems. This system stores everything in a database, enforces rules in Java, and uses Python to find patterns.
 
