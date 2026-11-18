@@ -5,3 +5,4 @@ test_apartment.db
 demo.db
 __pycache__/
 .ipynb_checkpoints/
+java/lib/
