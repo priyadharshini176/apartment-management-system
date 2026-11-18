@@ -101,8 +101,7 @@ python python/analysis.py
 Charts are saved in `outputs/charts/`, cleaned data in `outputs/*.csv`. (Run step 1 or 2 first so that `apartment.db` exists.)
 
 ## Live demo (GitHub Pages)
-**Live link:** `https://<your-github-priyadharshini176>.github.io/apartment-management-system/`
-
+**Live link:** `https://priyadharshini176.github.io/apartment-management-system/`
 GitHub Pages can only host static files, so the live link runs the same web interface in **demo mode**: it uses the sample data and the same validation rules inside the browser (`web/demo.js`), and keeps changes in that browser only. The real Java backend and the database run locally (see "How to run").
 
 To publish it: repository **Settings -> Pages -> Build and deployment -> Source: Deploy from a branch -> Branch: `main`, folder `/ (root)` -> Save**. After about a minute the link above works.
