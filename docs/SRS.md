@@ -1,7 +1,6 @@
 # Software Requirements Specification (SRS)
 **Project:** Apartment Maintenance and Resident Complaint Management System
-**Student:** _<PRIYADHARSHINI, 732925ITR078>_  |  **Department:** Information Technology, VCET  |  **Version:** 1.0
-
+**Student:** PRIYADHARSHINI, 732925ITR078  |  **Department:** Information Technology, VCET  |  **Version:** 1.0
 ---
 
 ## 1. Introduction
